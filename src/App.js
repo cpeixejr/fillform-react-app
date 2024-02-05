@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Brand from "./components/Brand";
+import LoginForm from "./components/LoginForm";
+import Ellipse from "./ellipse.svg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <img
+        src={Ellipse}
+        alt="ellipse"
+        style={{ position: "absolute", top: 0, right: 0 }}
+      />
+      <div className="App">
+        <Brand />
+        <LoginForm />
+      </div>
+      <img
+        src={Ellipse}
+        alt="ellipse"
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          transform: "rotate(180deg)",
+        }}
+      />
+    </>
   );
 }
 
